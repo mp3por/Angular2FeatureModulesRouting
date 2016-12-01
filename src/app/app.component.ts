@@ -1,7 +1,7 @@
 import { Component, NgZone, ViewEncapsulation } from '@angular/core';
 import { Location } from '@angular/common';
 import { tokenNotExpired, JwtHelper } from 'angular2-jwt';
-import { Router } from '@angular/router';
+import { Routes, RouterModule, RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 
 declare var Auth0Lock;
 
