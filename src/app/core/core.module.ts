@@ -16,32 +16,44 @@ const ownComponents = [
 ]
 
 const coreRoutes: Routes = [
-  { path: '', redirectTo: 'core', pathMatch: 'full' },
-  {
-    path: 'core',
-    component: CoreComponent,
-    children: [
-      {
-        path: '',
-        redirectTo: 'dashboard',
-        pathMatch: 'full'
+      { 
+        path: '', 
+        // pathMatch: 'full',
+        component: CoreComponent,
+        children: [
+          { path: 'dashboard', loadChildren: () => DashboardModule },
+          // { path: '', redirectTo: 'dashboard'}
+        ]
       },
-      {
-        path: 'dashboard',
-        children: [...dashboardRoutes]
-      },
-      {
-        path: 'test',
-        component: TestComponent
-      }
-    ]
-  }
+      { path: '**', redirectTo: 'dashboard'}
+
+
+//   { path: '', redirectTo: 'core', pathMatch: 'full' },
+//   {
+//     path: 'core',
+//     component: CoreComponent,
+//     children: [
+//       {
+//         path: '',
+//         redirectTo: 'dashboard',
+//         pathMatch: 'full'
+//       },
+//       {
+//         path: 'dashboard',
+//         children: [...dashboardRoutes]
+//       },
+//       {
+//         path: 'test',
+//         component: TestComponent
+//       }
+//     ]
+//   }
 ];
 
 @NgModule({
   imports: [
     CommonModule,
-    featureModules,
+    // featureModules,
 
     RouterModule.forChild(coreRoutes),
   ],
