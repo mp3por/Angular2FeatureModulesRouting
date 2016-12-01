@@ -13,11 +13,12 @@ export class AuthGuard implements CanActivate {
   constructor(private router: Router) {}
 
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    if (tokenNotExpired()) {
-      return true;
-    }
+    return true;
+    // if (tokenNotExpired()) {
+    //   return true;
+    // }
 
-    this.router.navigate(['']);
-    return false;
+    // this.router.navigate(['']);
+    // return false;
   }
 }

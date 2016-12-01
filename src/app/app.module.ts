@@ -5,33 +5,28 @@ import { HttpModule, Http } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { Ng2PlayRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 
-import { HomeComponent } from './home';
-import { TodoComponent } from './todo';
-import { AboutComponent } from './about';
-import { ProfileComponent } from './profile';
-import { MaterialComponent } from './material/material.component';
 
 import { AuthHttp, AuthConfig } from 'angular2-jwt';
 import { AuthGuard } from './auth-guard';
-import { DataService } from './shared';
+
+import { CoreModule } from './core/core.module';
+import { LoginModule } from './login/login.module';
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeComponent,
-    TodoComponent,
-    AboutComponent,
-    ProfileComponent,
-    MaterialComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     HttpModule,
-    MaterialModule.forRoot(),
-    Ng2PlayRoutingModule
+    AppRoutingModule,
+
+    CoreModule,
+    LoginModule
   ],
   providers: [
     {
@@ -42,8 +37,7 @@ import { DataService } from './shared';
       deps: [Http]
     },
     AuthHttp,
-    AuthGuard,
-    DataService
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

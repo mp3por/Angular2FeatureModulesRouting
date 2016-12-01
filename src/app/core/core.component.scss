@@ -1,0 +1,37 @@
+@import '../app.component';
+
+$core-nav-width: 100px;
+
+// Main layout properties
+.main-layout {
+  @extend [re-container];
+
+  .layout-right {
+    width: auto;
+    height: 100%;
+    margin-left: $core-nav-width;
+
+    // new
+    // position: absolute;
+    // z-index: 1;
+    // margin-left: $default-nav-layout-width;
+
+    // TODO: THIS DOES NOT WORK !!! If you make the right side bigger than the view it will not allow you to scroll !! FIX
+    overflow: hidden;
+  }
+
+  .layout-left {
+    height: 100%;
+    width: $core-nav-width;
+    overflow: hidden;
+    position: fixed;
+    overflow: visible;
+
+    // new
+    // position: absolute;
+    // z-index: 10;
+
+    // old
+    // float: left;
+  }
+}
