@@ -98,8 +98,8 @@ export class CoreRoutingModule { }
 
 
 
-      // { 
-      //   path: '', 
+      // {
+      //   path: '',
       //   // pathMatch: 'full',
       //   component: CoreComponent,
       //   children: [
