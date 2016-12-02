@@ -4,19 +4,37 @@ import { Routes, RouterModule } from '@angular/router';
 import { CoreComponent } from './core.component';
 import { TestComponent } from './test.component';
 
-export const eagerlyRoutedModules = [
+import { DashboardModule } from '../dashboard/dashboard.module';
+import { TransactionsModule } from '../transactions/transactions.module';
 
+
+export const eagerlyRoutedModules = [
+    DashboardModule
 ];
 
 export const ownComponents = [
-    CoreComponent
+    CoreComponent,
+    TestComponent
 ];
 
 const coreRoutes: Routes = [
-    { 
+    {
         // /core route will be the CoreComponent
-        path: 'core', 
-        component: CoreComponent 
+        path: 'core',
+        component: CoreComponent,
+        children: [
+            // lazy
+            { path: 'transactions', loadChildren: () => TransactionsModule },
+
+            // eagerly
+            // { path: 'dashboard', loadChildren: () => DashboardModule},
+
+            // default path redirects to dashboard
+            { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+
+            // handle all /core/[unmatched] routes
+            { path: '**', redirectTo: 'dashboard', pathMatch: 'full' }
+        ]
     }
 ];
 

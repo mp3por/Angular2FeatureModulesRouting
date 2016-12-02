@@ -12,13 +12,13 @@ export const eagerlyRoutedModules = [
 
 const routes: Routes = [
     // eagerly loaded module;
-    { path: '', redirectTo: 'core', pathMatch: 'full'}, 
+    { path: '', redirectTo: 'core', pathMatch: 'full'},
 
     // lazy loaded modules
     { path: 'login', loadChildren: () => LoginModule },
 
-    // redirect any unmatched routes 
-    { path: '**', redirectTo: 'core' }
+    // redirect any unmatched routes to /core
+    { path: '**', redirectTo: 'core', pathMatch: 'full' }
 ];
 
 @NgModule({

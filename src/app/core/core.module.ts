@@ -4,11 +4,14 @@ import { CoreComponent } from './core.component';
 import { TestComponent } from './test.component';
 import { Routes, RouterModule, RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 
-import { CoreRoutingModule, ownComponents }  from './core.routing';
+import { CoreRoutingModule, ownComponents, eagerlyRoutedModules }  from './core.routing';
 
 @NgModule({
   imports: [
     CommonModule,
+
+    eagerlyRoutedModules,
+
     CoreRoutingModule
   ],
   declarations: [
