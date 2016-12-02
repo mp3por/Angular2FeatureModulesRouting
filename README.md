@@ -5,6 +5,8 @@ This project is intended to be a playground for feature modules and routing in A
 
 ## Target 02/12/2016:
 To achieve following routing:
+
+```
 /  -> redirect to 'core'
 /login
 /core
@@ -16,16 +18,18 @@ To achieve following routing:
         /transactions
         /[random] -> redirect to 'dashboard'
 /[random] -> redirect to 'core'
-
+```
 
 valid routes:
-/login 
-/core/dashboard
-/core/dashboard/wtf
-/core/transactions
+/login ...
+/core/dashboard ...
+/core/dashboard/wtf ...
+/core/transactions ...
 
 
 Optional: 
 * don't have /core in the routes, but load 'dashboard','transactions' as children of CoreModule so that they get rendered insinde CoreComponent ( holds main-layout )
-Example:
+
+Example:...
 /dashboard to be the /core/dashboard route from above.
+
