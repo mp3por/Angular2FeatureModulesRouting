@@ -5,14 +5,11 @@ import { HttpModule, Http } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, eagerlyRoutedModules } from './app-routing.module';
 
 
 import { AuthHttp, AuthConfig } from 'angular2-jwt';
 import { AuthGuard } from './auth-guard';
-
-import { CoreModule } from './core/core.module';
-import { LoginModule } from './login/login.module';
 
 
 @NgModule({
@@ -25,8 +22,7 @@ import { LoginModule } from './login/login.module';
     HttpModule,
     AppRoutingModule,
 
-    CoreModule,
-    LoginModule
+    eagerlyRoutedModules
   ],
   providers: [
     {

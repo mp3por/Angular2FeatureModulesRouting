@@ -6,16 +6,24 @@ import { AuthGuard } from './auth-guard';
 import { LoginModule } from './login/login.module';
 import { CoreModule } from './core/core.module';
 
+export const eagerlyRoutedModules = [
+    CoreModule
+];
+
 const routes: Routes = [
-  { path: 'login', loadChildren: () => LoginModule },
-  { path: 'core', loadChildren: () => CoreModule },
-  // { path: '', redirectTo: 'core', pathMatch:'full'},
-  { path: '**', redirectTo: 'core' }
+    // eagerly loaded module;
+    { path: '', redirectTo: 'core', pathMatch: 'full'}, 
+
+    // lazy loaded modules
+    { path: 'login', loadChildren: () => LoginModule },
+
+    // redirect any unmatched routes 
+    { path: '**', redirectTo: 'core' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-  providers: []
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule],
+    providers: []
 })
 export class AppRoutingModule { }
