@@ -21,15 +21,19 @@ To achieve following routing:
 ```
 
 valid routes:
-/login ...
-/core/dashboard ...
-/core/dashboard/wtf ...
-/core/transactions ...
 
+```
+/login
+/core/dashboard
+/core/dashboard/wtf
+/core/transactions
+```
 
 Optional: 
 * don't have /core in the routes, but load 'dashboard','transactions' as children of CoreModule so that they get rendered insinde CoreComponent ( holds main-layout )
 
-Example:...
+Example:
+```
 /dashboard to be the /core/dashboard route from above.
+```
 
