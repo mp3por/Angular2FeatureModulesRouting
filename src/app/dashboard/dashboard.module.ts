@@ -32,6 +32,8 @@ const ownComponents = [
     declarations: [
         ownComponents
     ],
-    exports: []
+    exports: [
+      RouterModule
+    ]
 })
 export class DashboardModule { }
