@@ -25,17 +25,15 @@ const coreRoutes: Routes = [
         children: [
             // lazy
             { path: 'transactions', loadChildren: () => TransactionsModule },
-
-            // eagerly
-            // { path: 'dashboard', loadChildren: () => DashboardModule},
-
+            { path: 'dashboard', loadChildren: () => DashboardModule },
             // default path redirects to dashboard
             { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-
-            // handle all /core/[unmatched] routes
-            { path: '**', redirectTo: 'dashboard', pathMatch: 'full' }
         ]
-    }
+    },
+    
+
+    // handle all /core/[unmatched] routes
+    { path: '**', redirectTo: 'dashboard', pathMatch: 'full' }
 ];
 
 @NgModule({
