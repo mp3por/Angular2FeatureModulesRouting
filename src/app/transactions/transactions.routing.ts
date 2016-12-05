@@ -4,7 +4,7 @@ import { Routes, RouterModule, RouterOutlet, RouterLink, RouterLinkActive } from
 import { TransactionsComponent } from './transactions.component';
 
 const routes: Routes = [
-    { path: 'transactions', component: TransactionsComponent }
+    { path: '', component: TransactionsComponent }
 ]
 
 @NgModule({
