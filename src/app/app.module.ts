@@ -5,10 +5,8 @@ import { HttpModule, Http } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule, eagerlyRoutedModules } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
-import { DashboardModule } from './dashboard/dashboard.module';
-
 
 import { AuthHttp, AuthConfig } from 'angular2-jwt';
 import { AuthGuard } from './auth-guard';

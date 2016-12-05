@@ -4,11 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './auth-guard';
 
 import { LoginModule } from './login/login.module';
-import { CoreModule } from './core/core.module';
-
-export const eagerlyRoutedModules = [
-    CoreModule
-];
 
 const routes: Routes = [
     // eagerly loaded module;

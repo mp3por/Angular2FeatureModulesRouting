@@ -7,11 +7,6 @@ import { TestComponent } from './test.component';
 import { DashboardModule } from '../dashboard/dashboard.module';
 import { TransactionsModule } from '../transactions/transactions.module';
 
-
-export const eagerlyRoutedModules = [
-    DashboardModule
-];
-
 export const ownComponents = [
     CoreComponent,
     TestComponent
@@ -30,7 +25,7 @@ const coreRoutes: Routes = [
             { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
         ]
     },
-    
+
 
     // handle all /core/[unmatched] routes
     { path: '**', redirectTo: 'dashboard', pathMatch: 'full' }

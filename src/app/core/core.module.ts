@@ -6,16 +6,15 @@ import { DashboardModule } from '../dashboard/dashboard.module';
 import { DashboardRoutesModule } from '../dashboard/dashboard.routing';
 import { Routes, RouterModule, RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 
-import { CoreRoutingModule, ownComponents, eagerlyRoutedModules }  from './core.routing';
+import { CoreRoutingModule, ownComponents }  from './core.routing';
 
 @NgModule({
   imports: [
     CommonModule,
-    // eagerlyRoutedModules,
     CoreRoutingModule
   ],
   declarations: [
-    ownComponents
+    ...ownComponents
   ],
   exports: []
 })
