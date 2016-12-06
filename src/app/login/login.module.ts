@@ -10,7 +10,7 @@ import { LoginRoutingModule, ownComponents } from './login.routing';
     LoginRoutingModule
   ],
   declarations: [
-    ownComponents
+    ...ownComponents
   ]
 })
 export class LoginModule { }

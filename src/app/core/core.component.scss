@@ -1,6 +1,6 @@
 @import '../app.component';
 
-$core-nav-width: 100px;
+$core-nav-width: 150px;
 
 // Main layout properties
 .main-layout {
@@ -26,6 +26,10 @@ $core-nav-width: 100px;
     overflow: hidden;
     position: fixed;
     overflow: visible;
+
+    .active {
+      background: red;
+    }
 
     // new
     // position: absolute;

@@ -2,14 +2,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CoreComponent } from './core.component';
-import { TestComponent } from './test.component';
 
 import { DashboardModule } from '../dashboard/dashboard.module';
 import { TransactionsModule } from '../transactions/transactions.module';
 
 export const ownComponents = [
-    CoreComponent,
-    TestComponent
+    CoreComponent
 ];
 
 const coreRoutes: Routes = [

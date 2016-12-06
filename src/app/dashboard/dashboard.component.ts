@@ -5,12 +5,20 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
   host: {
-    're-container':''
+    're-container': ''
   }
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { console.log('creating dashboard') }
+  constructor() {
+    let omg = ['1','2'];
+    let omg2 = ['3'];
+    console.log(omg);
+    console.log(omg2);
+    console.log('--------');
+    console.log(['1','2',omg]);
+    console.log(['1','2',...omg2]);
+  }
 
   ngOnInit() {
   }

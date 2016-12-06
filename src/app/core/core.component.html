@@ -8,6 +8,24 @@
   <div class="layout-left">
     <!--<div re-core-nav-menu></div>-->
     layout-left
+    <div routerLinkActive="active" #rlaDashboard="routerLinkActive">
+      <div>
+        <a routerLink="/core/dashboard">
+        <!-- WORKS -->
+        Dashboard {{rlaDashboard.isActive}}
+        </a>
+      </div>
+      <img *ngIf="rlaDashboard.isActive" src="./assets/navigation/navigation-separator.svg" />
+      <img src="./assets/navigation/navigation-separator.svg" />
+    </div>
+    <div routerLinkActive="active" #rlaTransactions="routerLinkActive">
+      <div>
+        <a routerLink="/core/transactions">
+        Transactions {{rlaTransactions.isActive}}
+        </a>
+      </div>
+      <img src="./assets/navigation/navigation-separator.svg" />
+    </div>
   </div>
 
   <!-- Navigation Menu -->
@@ -21,4 +39,3 @@
 
 </div>
 <!-- /Main-->
-
