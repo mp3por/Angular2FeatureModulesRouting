@@ -15,7 +15,11 @@
         Dashboard {{rlaDashboard.isActive}}
         </a>
       </div>
+      <!-- DOES NOT WORK -->
       <img *ngIf="rlaDashboard.isActive" src="./assets/navigation/navigation-separator.svg" />
+      <img [ngClass]="{'hidden':rlaDashboard.isActive}" src="./assets/navigation/navigation-separator.svg" />
+      <!-- ================= -->
+
       <img src="./assets/navigation/navigation-separator.svg" />
     </div>
     <div routerLinkActive="active" #rlaTransactions="routerLinkActive">
