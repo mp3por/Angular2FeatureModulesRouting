@@ -16,9 +16,15 @@
         </a>
       </div>
       <!-- DOES NOT WORK -->
-      <img *ngIf="rlaDashboard.isActive" src="./assets/navigation/navigation-separator.svg" />
-      <img [ngClass]="{'hidden':rlaDashboard.isActive}" src="./assets/navigation/navigation-separator.svg" />
+      <!--<img *ngIf="rlaDashboard.isActive" src="./assets/navigation/navigation-separator.svg" />-->
+      <!--<img [ngClass]="{'hidden': rlaDashboard.isActive}" src="./assets/navigation/navigation-separator.svg" />-->
+      <!--<img [ngClass]="{'hidden': !isActive(rlaDashboard.isActive)}" src="./assets/navigation/navigation-separator.svg" />-->
       <!-- ================= -->
+
+      <!-- WORK -->
+      <!--<img [ngClass]="{'hidden': true}" src="./assets/navigation/navigation-separator.svg" />-->
+      <!--<img [ngClass]="{'hidden': isActive()}" src="./assets/navigation/navigation-separator.svg" />-->
+      <!-- ======================== -->
 
       <img src="./assets/navigation/navigation-separator.svg" />
     </div>

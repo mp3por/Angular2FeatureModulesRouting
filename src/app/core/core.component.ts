@@ -12,6 +12,10 @@ export class CoreComponent implements OnInit {
 
   constructor() { }
 
+  isActive(blah: boolean): boolean{
+    return blah || false;
+  }
+
   ngOnInit() {
   }
 
